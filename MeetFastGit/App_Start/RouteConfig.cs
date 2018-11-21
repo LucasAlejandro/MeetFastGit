@@ -9,6 +9,8 @@ namespace MeetFastGit
 {
     public class RouteConfig
     {
+
+        //SET RUTA INICIO//
         public static void RegisterRoutes(RouteCollection routes)
         {
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
@@ -16,7 +18,7 @@ namespace MeetFastGit
             routes.MapRoute(
                 name: "Default",
                 url: "{controller}/{action}/{id}",
-                defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional }
+                defaults: new { controller = "Contact", action = "Index", id = UrlParameter.Optional }
             );
         }
     }
