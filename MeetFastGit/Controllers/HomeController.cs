@@ -4,7 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 
-namespace MeetFastEmpty.Controllers
+namespace MeetFastGit.Controllers
 {
     public class HomeController : Controller
     {
