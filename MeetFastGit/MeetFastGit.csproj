@@ -1603,6 +1603,8 @@
     <Compile Include="Models\testClass.cs" />
     <Compile Include="Models\UsuarioModelo.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Servicios\Interfaces\IInteresInterface.cs" />
+    <Compile Include="Servicios\Interfaces\IUsuarioService.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\web.config" />

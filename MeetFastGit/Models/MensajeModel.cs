@@ -20,7 +20,7 @@ namespace MeetFastGit.Models
         public MensajeModel(long idEmisor, long idReceptor, DateTime fecha, string mensaje)
         {
             this.id_Emisor = idEmisor;
-            this.id_Receptor = id_Receptor;
+            this.id_Receptor = idReceptor;
             this.fecha = fecha;
             this.mensaje = mensaje;
         }

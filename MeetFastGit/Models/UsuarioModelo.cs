@@ -16,8 +16,8 @@ namespace MeetFastGit.Models
         private string fotoUI;
         private string telefono;
         private string localidad;
-        private List<long> listaDeIntereses;
-        private List<long> historias;
+        private List<InteresModelo> listaDeIntereses;
+        private List<HistoriaModelo> historias;
         private List<UsuarioModelo> amigos;
 
         public UsuarioModelo(string email, string contraseña, string nombre, DateTime fecha, string foto, string telefono, string localidad)
@@ -66,14 +66,19 @@ namespace MeetFastGit.Models
             return this.localidad;
         }
 
-        public List<long> getListaDeIntereses()
+        public List<InteresModelo> getListaDeIntereses()
         {
             return this.listaDeIntereses;
         }
 
-        public List<long> getHistorias()
+        public List<HistoriaModelo> getHistorias()
         {
             return this.historias;
+        }
+
+        public List<UsuarioModelo> getAmigos()
+        {
+            return this.amigos;
         }
 
         public void setEmail(string emailNuevo)
@@ -106,24 +111,34 @@ namespace MeetFastGit.Models
             this.localidad = localidadNueva;
         }
 
-        public void setListaDeIntereses(List<long> listaNueva)
+        public void setListaDeIntereses(List<InteresModelo> listaNueva)
         {
             this.listaDeIntereses = listaNueva;
         }
 
-        public void añadirNuevoInteres(long interes)
+        public void añadirNuevoInteres(InteresModelo interes)
         {
             this.listaDeIntereses.Add(interes);
         }
 
-        public void setHistoias(List<long> historias)
+        public void setHistoias(List<HistoriaModelo> historias)
         {
             this.historias = historias;
         }
 
-        public void añadirHistoria(long historia)
+        public void añadirHistoria(HistoriaModelo historia)
         {
             this.historias.Add(historia);
+        }
+
+        public void setAmigos(List<UsuarioModelo> amigos)
+        {
+            this.amigos = amigos;
+        }
+        
+        public void añadirAmigos(UsuarioModelo amigo)
+        {
+            this.amigos.Add(amigo);
         }
 
     }

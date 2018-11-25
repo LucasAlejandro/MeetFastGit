@@ -14,8 +14,9 @@ namespace MeetFastGit.Models
         private DateTime fechaCreacion;
         private DateTime fechaEvento;
         private string coordenadas;
+        private List<ComentarioModel> comentarios;
         
-        public EventoModel(string tematica, bool privado, DateTime fCreacion, DateTime fEvento, string coodenadas)
+        public EventoModel(string tematica, bool privado, DateTime fCreacion, DateTime fEvento, string coordenadas)
         {
             this.tematica = tematica;
             this.privado = privado;
@@ -49,6 +50,10 @@ namespace MeetFastGit.Models
             this.fechaCreacion = FEvento;
         }
 
+        public void setComentarios(List<ComentarioModel> comentarios)
+        {
+            this.comentarios = comentarios;
+        }
 
         public void setCoordenadas(string coordenadas)
         {
@@ -83,6 +88,16 @@ namespace MeetFastGit.Models
         public string getCoordenadas()
         {
             return this.coordenadas;
+        }
+
+        public List<ComentarioModel> getComentarios()
+        {
+            return this.comentarios;
+        }
+
+        public void añadirComentario(ComentarioModel comentario)
+        {
+            this.comentarios.Add(comentario);
         }
 
         
