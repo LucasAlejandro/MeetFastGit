@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace MeetFastGit.Servicios.Interfaces
 {
-    public interface IInteresInterface
+    public interface IInteresService
     {
         /// <summary>
         /// Añade un interes a la bbdd
