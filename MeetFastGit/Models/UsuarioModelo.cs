@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using MeetFastGit.Models;
 
 namespace MeetFastGit.Models
 {
@@ -15,7 +16,20 @@ namespace MeetFastGit.Models
         private string fotoUI;
         private string telefono;
         private string localidad;
-        private List<InteresModelo> listaDeIntereses;
+        private List<long> listaDeIntereses;
+        private List<long> historias;
+        private List<UsuarioModelo> amigos;
+
+        public UsuarioModelo(string email, string contraseña, string nombre, DateTime fecha, string foto, string telefono, string localidad)
+        {
+            this.email = email;
+            this.contraseña = contraseña;
+            this.nombre = nombre;
+            this.fechaDeNacimiento = fecha;
+            this.fotoUI = foto;
+            this.telefono = telefono;
+            this.localidad = localidad;
+        }
 
         public long getID()
         {
@@ -52,9 +66,14 @@ namespace MeetFastGit.Models
             return this.localidad;
         }
 
-        public List<IteresesModelo> getListaDeIntereses()
+        public List<long> getListaDeIntereses()
         {
             return this.listaDeIntereses;
+        }
+
+        public List<long> getHistorias()
+        {
+            return this.historias;
         }
 
         public void setEmail(string emailNuevo)
@@ -87,9 +106,24 @@ namespace MeetFastGit.Models
             this.localidad = localidadNueva;
         }
 
-        public void setListaDeIntereses(List<IteresesModelo> listaNueva)
+        public void setListaDeIntereses(List<long> listaNueva)
         {
             this.listaDeIntereses = listaNueva;
+        }
+
+        public void añadirNuevoInteres(long interes)
+        {
+            this.listaDeIntereses.Add(interes);
+        }
+
+        public void setHistoias(List<long> historias)
+        {
+            this.historias = historias;
+        }
+
+        public void añadirHistoria(long historia)
+        {
+            this.historias.Add(historia);
         }
 
     }

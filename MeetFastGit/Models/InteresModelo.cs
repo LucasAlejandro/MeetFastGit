@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using MeetFastGit.Models;
 
 namespace MeetFastGit.Models
 {
@@ -10,6 +11,12 @@ namespace MeetFastGit.Models
         private long ID;
         private string nombre;
         private string tipo;
+
+        public InteresModelo(string nombre, string tipo)
+        {
+            this.nombre = nombre;
+            this.tipo = tipo;
+        }
 
         public long getID()
         {
