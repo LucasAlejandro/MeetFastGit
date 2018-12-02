@@ -1,9 +1,5 @@
 ﻿using MeetFastGit.Models;
-using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace MeetFastGit.Servicios.Interfaces
 {
@@ -26,8 +22,8 @@ namespace MeetFastGit.Servicios.Interfaces
         /// <summary>
         /// Busca todas las historias
         /// </summary>
-        /// <returns></returns>
         /// <param name="usuario"></param>
+        /// <returns>Las historias de un usuario</returns>
         List<HistoriaModelo> todasHistorias(long usuario);
     }
 }

@@ -16,6 +16,11 @@ namespace MeetFastGit.Models
             this.contenido = contenido;
         }
 
+        public HistoriaModelo()
+        {
+
+        }
+
         public void setHora(DateTime hora)
         {
             this.hora = hora;

@@ -10,6 +10,7 @@ namespace MeetFastGit.Models
         private long idUsuario;
         private DateTime fecha;
         private string contenido;
+        private long idEvento;
 
         public ComentarioModel(long usuario, DateTime fecha, string contenido)
         {
@@ -17,9 +18,19 @@ namespace MeetFastGit.Models
             this.fecha = fecha;
         }
 
+        public ComentarioModel()
+        {
+
+        }
+
         public void setIdUsuario(long idUsuario)
         {
             this.idUsuario = idUsuario;
+        }
+
+        public void setIdEvento(long idEvento)
+        {
+            this.idEvento = idEvento;
         }
 
         public void setFecha(DateTime fecha)
@@ -36,6 +47,11 @@ namespace MeetFastGit.Models
         public long getIdUsuario()
         {
             return this.idUsuario;
+        }
+
+        public long getIdEvento()
+        {
+            return this.idEvento;
         }
 
         public DateTime getFecha()

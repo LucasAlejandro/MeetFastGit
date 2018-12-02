@@ -18,6 +18,10 @@ namespace MeetFastGit.Models
             this.tipo = tipo;
         }
 
+        public InteresModelo()
+        {
+
+        }
         public long getID()
         {
             return this.ID;
@@ -41,6 +45,11 @@ namespace MeetFastGit.Models
         public void setTipo(string tipoNuevo)
         {
             this.tipo = tipoNuevo;
+        }
+
+        public void setID(long ID)
+        {
+            this.ID = ID;
         }
     }
 }

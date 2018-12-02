@@ -1,9 +1,5 @@
 ﻿using MeetFastGit.Models;
-using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace MeetFastGit.Servicios.Interfaces
 {
@@ -13,13 +9,44 @@ namespace MeetFastGit.Servicios.Interfaces
         /// Añade un evento
         /// </summary>
         /// <param name="evento"></param>
-        void addEvento(EventoModel evento);
+        /// <param name="creador">ID del creador del evento</param>
+        void addEvento(EventoModel evento, long creador);
 
         /// <summary>
-        /// Actualiza un evento
+        /// Actualiza la descripción de un evento
         /// </summary>
         /// <param name="evento"></param>
-        void updateEvento(EventoModel evento);
+        void updateDescripcion(EventoModel evento);
+
+        /// <summary>
+        /// Actualiza el nombre del evento
+        /// </summary>
+        /// <param name="evento"></param>
+        void updateNombre(EventoModel evento);
+
+        /// <summary>
+        /// Actualiza la ubicación del evento
+        /// </summary>
+        /// <param name="evento"></param>
+        void updateUbicacion(EventoModel evento);
+        
+        /// <summary>
+        /// Actualiza la visibilidad del evento
+        /// </summary>
+        /// <param name="evento"></param>
+        void updateVisibilidad(EventoModel evento);
+
+        /// <summary>
+        /// Actualiza la fecha en la que tendrá lugar el evento
+        /// </summary>
+        /// <param name="evento"></param>
+        void updateFecha(EventoModel evento);
+
+        /// <summary>
+        /// Actualiza la temática del evento
+        /// </summary>
+        /// <param name="evento"></param>
+        void updateTematica(EventoModel evento);
 
         /// <summary>
         /// Elimina un evento
@@ -31,34 +58,34 @@ namespace MeetFastGit.Servicios.Interfaces
         /// Añade un asistente
         /// </summary>
         /// <param name="asistente"></param>
-        void addAsistente(UsuarioModelo asistente);
+        /// <param name="IdEvento"></param>
+        void addAsistente(UsuarioModelo asistente, long IdEvento);
 
         /// <summary>
         /// Elimina un asistente
         /// </summary>
         /// <param name="asistente"></param>
-        void removeAsistente(UsuarioModelo asistente);
+        /// <param name="id"></param>
+        void removeAsistente(UsuarioModelo asistente, long id);
 
         /// <summary>
         /// Busca eventos cercanos
         /// </summary>
-        /// <param name="coordenadas"></param>
-        /// <returns></returns>
-        List<EventoModel> eventosCercanos(string coordenadas);
+        /// <param name="latitud"></param>
+        /// <param name="longitud"></param>
+        /// <param name="distancia"></param>
+        /// <returns>Lista de los eventos a la distancia indicada</returns>
+        List<EventoModel> eventosCercanos(long latitud, long longitud, int distancia);
 
         /// <summary>
         /// Busca eventos cercanos con cierta tematica
         /// </summary>
-        /// <param name="coordenadas"></param>
+        /// <param name="latitud"></param>
+        /// <param name="longitud"></param>
         /// <param name="tematica"></param>
-        /// <returns></returns>
-        List<EventoModel> eventosTematica(string coordenadas, string tematica);
+        /// <param name="distancia"></param>
+        /// <returns>Lista de los eventos de la temática indicada en la distancia indicada</returns>
+        List<EventoModel> eventosTematica(long latitud, long longitud, string tematica, int distancia);
 
-        /// <summary>
-        /// Visauliza la lista de asistentes
-        /// </summary>
-        /// <param name="idEvento"></param>
-        /// <returns></returns>
-        List<UsuarioModelo> asistentes(long idEvento);
     }
 }

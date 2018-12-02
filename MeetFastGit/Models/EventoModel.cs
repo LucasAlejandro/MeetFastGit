@@ -13,17 +13,28 @@ namespace MeetFastGit.Models
         private bool privado;
         private DateTime fechaCreacion;
         private DateTime fechaEvento;
-        private string coordenadas;
+        private long latitud;
+        private long longitud;
         private List<ComentarioModel> comentarios;
         private List<UsuarioModelo> asistentes;
+        private long idCreador;
+        private string nombre;
         
-        public EventoModel(string tematica, bool privado, DateTime fCreacion, DateTime fEvento, string coordenadas)
+        public EventoModel(string nombre, string tematica, bool privado, DateTime fCreacion, DateTime fEvento, long latitud, long longitud, long idCreador)
         {
+            this.nombre = nombre;
             this.tematica = tematica;
             this.privado = privado;
             this.fechaCreacion = fCreacion;
             this.fechaEvento = fEvento;
-            this.coordenadas = coordenadas;
+            this.latitud = latitud;
+            this.idCreador = idCreador;
+            this.longitud = longitud;
+        }
+
+        public EventoModel()
+        {
+
         }
 
         public void setID(long id)
@@ -31,6 +42,25 @@ namespace MeetFastGit.Models
             this.id = id;
         }
 
+        public void setNombre(string nombre)
+        {
+            this.nombre = nombre;
+        }
+
+        public void setCreador(long id)
+        {
+            this.idCreador = id;
+        }
+
+        public void setLatitud(long latitud)
+        {
+            this.latitud = latitud;
+        }
+
+        public void setLongitud(long longitud)
+        {
+            this.longitud = longitud;
+        }
         public void setTematica(string tematica)
         {
             this.tematica = tematica;
@@ -54,11 +84,6 @@ namespace MeetFastGit.Models
         public void setComentarios(List<ComentarioModel> comentarios)
         {
             this.comentarios = comentarios;
-        }
-
-        public void setCoordenadas(string coordenadas)
-        {
-            this.coordenadas = coordenadas;
         }
 
         public void setAsistentes(List<UsuarioModelo> asistentes)
@@ -91,9 +116,14 @@ namespace MeetFastGit.Models
             return this.fechaEvento;
         }
 
-        public string getCoordenadas()
+        public long getLatitud()
         {
-            return this.coordenadas;
+            return this.latitud;
+        }
+
+        public long getLongitud()
+        {
+            return this.longitud;
         }
 
         public List<ComentarioModel> getComentarios()
@@ -116,6 +146,10 @@ namespace MeetFastGit.Models
             this.asistentes.Add(asistente);
         }
 
+        public string getNombre()
+        {
+            return this.nombre;
+        }
         
     }
 }

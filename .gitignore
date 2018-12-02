@@ -261,3 +261,4 @@ __pycache__/
 *.pyc
 /MeetFastGit/Servicios/Interfaces/IUsuarioService.cs
 /MeetFastGit/Servicios/Interfaces
+/MeetFastGit/Conexion/Conexion.cs

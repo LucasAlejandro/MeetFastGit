@@ -1,9 +1,5 @@
 ﻿using MeetFastGit.Models;
-using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace MeetFastGit.Servicios.Interfaces
 {
@@ -26,14 +22,14 @@ namespace MeetFastGit.Servicios.Interfaces
         /// </summary>
         /// <param name="tipo"></param>
         /// <returns></returns>
-        IEnumerable<InteresModelo> todosInteresTipo(string tipo);
+        List<InteresModelo> todosInteresTipo(string tipo);
 
         /// <summary>
         /// Busca un interés por el nombre
         /// </summary>
         /// <param name="nombre"></param>
-        /// <returns></returns>
-        InteresModelo interesNombre(string nombre);
+        /// <returns>Lista de intereses con un determinado nombre</returns>
+        List<InteresModelo> interesNombre(string nombre);
 
         /// <summary>
         /// Elimina un interes de la bbdd
@@ -44,7 +40,7 @@ namespace MeetFastGit.Servicios.Interfaces
         /// <summary>
         /// Busca todos los tipos de interes
         /// </summary>
-        /// <returns></returns>
-        IEnumerable<String> todosTipos();
+        /// <returns>Lista de todos los tipos de intereses</returns>
+        List<string> todosTipos();
     }
 }

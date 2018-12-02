@@ -1,9 +1,6 @@
 ﻿using MeetFastGit.Models;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace MeetFastGit.Servicios.Interfaces
 {
@@ -30,22 +27,25 @@ namespace MeetFastGit.Servicios.Interfaces
         /// <summary>
         /// Busca comentarios que contentan un texto determinada
         /// </summary>
+        /// <param name="idEvento"></param>
         /// <param name="contenido"></param>
-        /// <returns></returns>
-        List<ComentarioModel> buscarComentarioContenido(string contenido);
+        /// <returns>Los comentarios de un evento que contentan una cadena determinada</returns>
+        List<ComentarioModel> buscarComentarioContenido(long idEvento, string contenido);
 
         /// <summary>
         /// Busca comentarios por fecha
         /// </summary>
+        /// <param name="idEvento"></param>
         /// <param name="fecha"></param>
-        /// <returns></returns>
-        List<ComentarioModel> buscarComentarioFecha(DateTime fecha);
+        /// <returns>Los comentarios de un evento en una fecha determinada</returns>
+        List<ComentarioModel> buscarComentarioFecha(long idEvento, DateTime fecha);
 
         /// <summary>
         /// Busca los comentarios de un usuario dado
         /// </summary>
-        /// <param name="id"></param>
-        /// <returns></returns>
-        List<ComentarioModel> buscarComentarioUsuario(long id);
+        /// <param name="IdEvento"></param>
+        /// <param name="id">ID del usuario</param>
+        /// <returns>Los comentarios de un evento hechos por un usuario</returns>
+        List<ComentarioModel> buscarComentarioUsuario(long IdEvento, long id);
     }
 }

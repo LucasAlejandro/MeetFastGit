@@ -60,5 +60,10 @@ namespace MeetFastGit.Models
             return fecha;
         }
 
+        public string getMensaje()
+        {
+            return mensaje;
+        }
+
     }
 }

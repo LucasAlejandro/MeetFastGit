@@ -31,9 +31,21 @@ namespace MeetFastGit.Models
             this.localidad = localidad;
         }
 
+        public UsuarioModelo() { }
+
         public long getID()
         {
             return this.ID;
+        }
+
+        public string getContraseña()
+        {
+            return this.contraseña;
+        }
+
+        public void setID(long ID)
+        {
+            this.ID = ID;
         }
 
         public string getEmail()
